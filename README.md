@@ -9,3 +9,6 @@ MongoDB and starts it. The main advantage of installing MongoDB this way is:
 
 This is a great boilerplate for starting Node.js projects that need a MongoDB
 and will eventually be Dockerized.
+
+# Usage:
+`docker-compose up`
