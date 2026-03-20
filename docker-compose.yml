@@ -1,10 +1,11 @@
 # Start Mongo DB with the command 'docker-compose up -d'
 
-mongodb:
-  image: mongo:4.2.18
-  ports:
-    - "27017:27017" # <host port>:<container port>
-  volumes:
-    - ./database:/data/db
-  command: mongod --smallfiles --logpath=/dev/null # -- quiet
-  restart: always
+services:
+  mongodb:
+    image: mongo:4.2.18
+    ports:
+      - "27017:27017" # <host port>:<container port>
+    volumes:
+      - ./database:/data/db
+    command: mongod --smallfiles --logpath=/dev/null # -- quiet
+    restart: always
