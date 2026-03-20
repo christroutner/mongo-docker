@@ -2,10 +2,16 @@
 
 services:
   mongodb:
+    container_name: mongo
     image: mongo:4.2.18
     ports:
       - "27017:27017" # <host port>:<container port>
     volumes:
       - ./database:/data/db
-    command: mongod --smallfiles --logpath=/dev/null # -- quiet
+    command: mongod
+    logging:
+        driver: 'json-file'
+        options:
+          max-size: '10m'
+          max-file: '10'
     restart: always
