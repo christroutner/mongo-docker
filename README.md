@@ -11,4 +11,7 @@ This is a great boilerplate for starting Node.js projects that need a MongoDB
 and will eventually be Dockerized.
 
 # Usage:
-`docker-compose up`
+- `docker compose up`
+- `docker compose logs -f`
+- `docker compose down`
+
